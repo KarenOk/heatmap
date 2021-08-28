@@ -67,6 +67,46 @@
   cursor: unset;
 }
 
+.heat-map__cell--negative-1 {
+  background: #F6BDC0
+}
+
+.heat-map__cell--negative-2 {
+  background: #F1959B
+}
+
+.heat-map__cell--negative-3 {
+  background: #F07470
+}
+
+.heat-map__cell--negative-4 {
+  background: #EA4C46
+}
+
+.heat-map__cell--negative-5 {
+  background: #DC1C13
+}
+
+.heat-map__cell--positive-1 {
+  background: #C5E8B7
+}
+
+.heat-map__cell--positive-2 {
+  background: #ABE098
+}
+
+.heat-map__cell--positive-3 {
+  background: #83D475
+}
+
+.heat-map__cell--positive-4 {
+  background: #57C84D
+}
+
+.heat-map__cell--positive-5 {
+  background: #2EB62C
+}
+
 .heat-map__label {
   position: absolute;
   font-size: 12px;

@@ -1,7 +1,11 @@
 import React from "react";
 import dayjs from "dayjs";
 import transactions from "../data/transactions.json";
-import { getNetTransactions, groupByDate } from "../utils/helpers";
+import {
+	getHeatmapCellColor,
+	getNetTransactions,
+	groupByDate,
+} from "../utils/helpers";
 import { ITransactionSummary } from "../interfaces/transactions";
 
 const year = 2019;
@@ -58,7 +62,9 @@ const HeatMap = () => {
 					const transactions = monthsData[month];
 					return transactions.map((txn: any, index: number) => (
 						<div
-							className="heat-map__cell"
+							className={`heat-map__cell ${getHeatmapCellColor(
+								txn.netTransactions
+							)}`}
 							key={index}
 							data-tip={`${txn.date}<br/>Net: ${txn.netTransactions}`}
 						></div>

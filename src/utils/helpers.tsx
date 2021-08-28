@@ -19,7 +19,9 @@ export const getNetTransactions = (transactions: ITransaction[]) => {
 	return formatTo2DP(total);
 };
 
-export const getHeatmapClass = (netAmount: number) => {
+export const getHeatmapCellColor = (netAmount: number | null) => {
+	if (netAmount === null) return "";
+
 	if (netAmount < 0) {
 		// set red ranges
 		if (netAmount < -10000) return "heat-map__cell--negative-5";
