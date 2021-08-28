@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.jpeg";
 import "./App.css";
 import HeatMap from "./components/HeatMap";
+import ReactTooltip from "react-tooltip";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<main className="content">
 				<HeatMap />
 			</main>
+			<ReactTooltip multiline={true} />
 		</div>
 	);
 }
