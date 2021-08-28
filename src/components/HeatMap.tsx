@@ -67,7 +67,13 @@ const HeatMap = () => {
 							)}`}
 							key={index}
 							data-tip={`${txn.date}<br/>Net: ${txn.netTransactions}`}
-						></div>
+						>
+							{month === "Jan" && index + firstDay < 7 && (
+								<p className="heat-map__label heat-map__label--left">
+									{days[index + firstDay]}
+								</p>
+							)}
+						</div>
 					));
 				})}
 			</div>
