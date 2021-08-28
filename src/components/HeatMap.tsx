@@ -49,6 +49,7 @@ for (let monthNo in months) {
 }
 
 const HeatMap = () => {
+	let traversed = 0;
 	return (
 		<div className="heat-map">
 			<div className="heat-map__cells">
@@ -61,21 +62,31 @@ const HeatMap = () => {
 				))}
 				{months.map((month) => {
 					const transactions = monthsData[month];
-					return transactions.map((txn: any, index: number) => (
-						<div
-							className={`heat-map__cell ${getHeatmapCellColor(
-								txn.netTransactions
-							)}`}
-							key={index}
-							data-tip={`${txn.date}<br/>Net: ${txn.netTransactions}`}
-						>
-							{month === "Jan" && index + firstDay < 7 && (
-								<p className="heat-map__label heat-map__label--left">
-									{days[index + firstDay]}
-								</p>
-							)}
-						</div>
-					));
+					return transactions.map((txn: any, index: number) => {
+						console.log(traversed);
+						traversed = traversed + 1;
+						return (
+							<div
+								className={`heat-map__cell ${getHeatmapCellColor(
+									txn.netTransactions
+								)}`}
+								key={index}
+								data-tip={`${txn.date}<br/>Net: ${txn.netTransactions}`}
+							>
+								{month === "Jan" && index + firstDay < 7 && (
+									<p className="heat-map__label heat-map__label--left">
+										{days[index + firstDay]}
+									</p>
+								)}
+								{(traversed + firstDay === 7 ||
+									(traversed + firstDay) % 35 === 0) && (
+									<p className="heat-map__label heat-map__label--bottom">
+										{month}
+									</p>
+								)}
+							</div>
+						);
+					});
 				})}
 			</div>
 		</div>
