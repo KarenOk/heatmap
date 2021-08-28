@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.jpeg";
+import "./App.css";
+import HeatMap from "./components/HeatMap";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="app">
+			<header className="header">
+				<img src={logo} alt="Transaction Map" className="logo" />
+				<h1 className="heading">
+					Transaction <br /> Map
+				</h1>
+			</header>
+			<main className="content">
+				<HeatMap />
+			</main>
+		</div>
+	);
 }
 
 export default App;
