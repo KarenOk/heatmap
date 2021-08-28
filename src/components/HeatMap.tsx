@@ -7,6 +7,7 @@ import {
 	groupByDate,
 } from "../utils/helpers";
 import { ITransactionSummary } from "../interfaces/transactions";
+import "../styles/HeatMap.css";
 
 const year = 2019;
 const days: string[] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
