@@ -1,0 +1,18 @@
+.legend {
+    margin-top: 20px;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.legend__group, .legend__cells {
+    display: flex;
+    align-items: center;
+}
+
+.legend__text {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 5px;
+}

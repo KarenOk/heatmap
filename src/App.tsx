@@ -3,6 +3,7 @@ import logo from "./logo.jpeg";
 import "./App.css";
 import HeatMap from "./components/HeatMap";
 import ReactTooltip from "react-tooltip";
+import Legend from "./components/Legend";
 
 function App() {
 	return (
@@ -13,8 +14,11 @@ function App() {
 					Transaction <br /> Map
 				</h1>
 			</header>
-			<main className="content">
-				<HeatMap />
+			<main className="main">
+				<div className="content">
+					<HeatMap />
+					<Legend />
+				</div>
 			</main>
 			<ReactTooltip multiline={true} />
 		</div>
