@@ -63,7 +63,6 @@ const HeatMap = () => {
 				{months.map((month) => {
 					const transactions = monthsData[month];
 					return transactions.map((txn: any, index: number) => {
-						console.log(traversed);
 						traversed = traversed + 1;
 						return (
 							<div
@@ -96,19 +95,3 @@ const HeatMap = () => {
 };
 
 export default HeatMap;
-
-// {new Array(366).fill(null).map((_, index) => (
-// 	<div className="heat-map__cell" key={index}>
-// 		{index + firstDay < 7 && (
-// 			<p className="heat-map__label heat-map__label--left">
-// 				{days[index + firstDay]}
-// 			</p>
-// 		)}
-// 		{/* {(index + 1) % 30 === 0 && (
-// 			<p className="heat-map__label heat-map__label--bottom">
-// 				{months[(index + 1) / 30]}
-// 				{(index + 1) / 30}
-// 			</p>
-// 		)} */}
-// 	</div>
-// ))}
